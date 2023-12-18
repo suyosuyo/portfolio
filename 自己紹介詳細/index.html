@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- フォント -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&family=Zen+Maru+Gothic&display=swap" rel="stylesheet">
+
+    <!-- ファビコン -->
+    <link rel="icon" href="../img/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../img/favicon.ico">
+
+    <!-- script jquery -->
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    <script src="./main.js"></script>
+
+    <!-- css -->
+    <link rel="stylesheet" href="./style.css">
+
+    <title>自己紹介</title>
+</head>
+<body>
+
+    <div id="splash">
+        <div id="splash_logo"></div>
+    </div>
+
+    <header>
+
+        <nav class="headerimg">
+            <nav>
+                <ul>
+                    <li><a href="../index.html" class="line"><div><h3>TOP</h3></div></a></li>
+                    <li><a href="../自己紹介詳細/index.html" class="line"><div><h3><ruby>自己紹介<rt>じこしょうかい</rt></ruby></h3></div></a></li>
+                    <li><a href="../制作物/index.html" class="line"><div><h3><ruby>制作物<rt>せいさくぶつ</rt></ruby></h3></div></a></li>
+                </ul>
+            </nav>
+        </nav>
+        <img src="./img/wave.png" alt="">
+
+
+        <!-- sumaho -->
+
+         <!-- sumaho -->
+         <nav class="sumaho">
+            <nav class="button" id="target"></nav>
+
+            <nav id="resnav" class="nav">
+
+                <ul>
+                    <li>
+                        <a href="../index.html">
+                            <div class="btn"><h3>トップページ</h3></div>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="./index.html">
+                            <div class="btn"><h3><ruby>自己紹介<rt>じこしょうかい</rt></ruby></h3></div>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../制作物/index.html">
+                            <div class="btn"><h3><ruby>制作物<rt>せいさくぶつ</rt></ruby></h3></div>
+                        </a>
+                    </li>
+
+                </ul>
+
+            </nav>
+
+    </header>
+
+    <main>
+
+        <section>
+
+            <div class="content1 fadein1">
+
+                <div class="con">
+                    <h1><ruby>自己紹介<rt>じこしょうかい</rt></ruby></h1>
+
+                    <div class="box-1 fadein2">
+
+                        <div class="icon">
+                            <img src="./img/icon.png" alt="">
+                        </div>
+
+                        <div class="text1">
+                            <h3>
+                                大谷麻由美、22歳です。徳島から引っ越してきました。
+                            </h3>
+                            <h3>
+                                現在は札幌に住みながら、職業訓練でプログラミングの勉強をしています。
+                            </h3>
+                            <h3>
+                                HTMLやCSSなどを使用し、HP作成などの授業を行っています。Javascriptなども使用していますが、まだまだ勉強不足なところがあるので、
+                                少しずつ調べながら頑張っています。制作物のページに今まで作った作品を載せていますので、良ければ参照してください。
+                            </h3>
+                            <div class="seilink">
+                                <a href="../制作物/index.html" class="line2">... 制作物を見る</a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+        <footer>
+
+            <nav>
+                
+            </nav>
+
+        </footer>
+
+    </main>
+
+    <script>
+       
+        $(function () {
+          $('#target').click(() => {
+            $('#target').toggleClass('button2');
+            $('#resnav').toggleClass('nav_active');
+          });
+          // ナビ内リンクでジャンプ時、メニューを閉じる
+        
+          $('.btn').click(() => {
+            $('#target').removeClass('button2');
+            $('#resnav').removeClass('nav_active');
+          });
+        });
+            </script>
+</body>
+</html>

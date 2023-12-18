@@ -1,0 +1,585 @@
+@charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* 共通 */
+
+h3,
+a,
+li,
+h4,
+h1,
+p,
+label{
+    /* 文字 */
+    font-family: 'Noto Sans JP', sans-serif;
+    font-family: 'Zen Maru Gothic', serif;
+    font-size: 16px;
+    text-decoration: none;
+    color: #665f51;
+}
+
+
+h3 {
+    color: #665f51;
+}
+
+.secscr a {
+    color:  rgb(227, 205, 193);
+}
+
+html {
+    background: #f5efe5;
+
+    /* スクロールゆっくり */
+    scroll-behavior: smooth;
+}
+
+h3 {
+    line-height: 2;
+}
+
+section {
+    /* 横幅指定 */
+    margin: 4rem auto;
+    position: relative;
+
+    width: 70%;
+}
+
+
+/* header */
+
+/* .headerimg {
+    background: url(./img/header.png);
+    width: 100%;
+    height: 30vh;
+    width: 100%;
+} */
+
+.headerimg {
+    background: #e7d4b5;
+}
+
+header img {
+    width: 100%;
+    height: 10vh;
+
+}
+
+.content1 {
+    background:  rgba(231, 212, 181,.4);
+    border-radius: 50px;
+}
+
+.con {
+    padding: 2rem;
+}
+
+header {
+    width: 100%;
+}
+
+.headerimg ul {
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    width: 70%;
+    margin: 0 auto;
+    padding: 2%;
+}
+
+.headerimg h3 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #f4f4f4;
+    text-align: center;
+}
+
+.headerimg a div {
+    width: 120px;
+}
+
+.headerimg li {
+    padding-left: 10px; 
+}
+
+
+/* hoverで下線 */
+.line {
+    padding-bottom: 4px;
+    position: relative;
+
+    &::after {
+        background-color: #f4f4f4;
+        bottom: 0;
+        content: '';
+        height: 4px;
+        position: absolute;
+        transition: .5s all;
+        width: 0;
+        border-radius: 10px;
+      }
+      
+      &:hover {
+        &:after {
+          width: 100%;
+        }
+}
+}
+  
+  .line{ 
+    &::after {
+    left: 50%;
+    transform: translateX(-50%)
+  }
+}
+
+
+/* メイン */
+.content1 h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 24px;
+}
+
+.fadein1,
+.fadein2 {
+    opacity: 0;
+    transition: opacity 1s;
+
+    animation: fadeinAnime 3s 1;
+    animation-fill-mode: both;
+}
+
+
+@keyframes fadeinAnime {
+    0%{ opacity: 0}
+    80%{ opacity: 1;}
+    100%{ opacity: 1;}
+  }
+
+.fadein2 {
+    transition-duration: 1s;
+}
+
+.icon img {
+    height: 300px;
+}
+
+.icon h4 {
+    text-align: center;
+}
+
+.box-1 {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 0 auto;
+}
+
+/* ホバーででかくなる */
+label {
+    display: inline-block;
+    transition: .3s;
+  }
+  label:hover {
+    transform: scale(0.9);
+  }
+
+
+/* footer */
+footer nav {
+    height: 20vh;
+    background: url(./img/footer.png);
+    width: 100%;
+    background-size: 1000px;
+    background-position: bottom -60px left 10px;
+}
+
+
+  /* スクロールバー */
+
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+   
+  ::-webkit-scrollbar-thumb {
+    background: #a0937d;
+    border-radius: 5px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background:  rgba(231, 212, 181,.3);
+    border-radius: 5px;
+  }
+
+
+  /* モーダル */
+
+  /*--------------------------------------
+  モーダル表示上から_002
+--------------------------------------*/
+.modal_wrap input {
+  display: none;
+}
+
+.modal_overlay {
+  display: flex;
+  justify-content: center;
+  overflow: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  opacity: 0;
+  transition: opacity 0.5s, transform 0s 0.5s;
+  transform: scale(0);
+}
+
+.modal_trigger {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.modal_content {
+    /* align-self: center; */
+    margin: auto; 
+    border-radius: 50px;
+    width: 60%;
+    padding: 30px 30px 15px;
+    box-sizing: border-box;
+    background:  #f5efe5;
+    line-height: 1.4em;
+    transition: 0.5s;
+}
+
+.modal_content p {
+  padding-top: 0;
+}
+
+.close_button {
+  position: absolute;
+  top: 14px;
+  right: 25px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.modal_wrap input:checked ~ .modal_overlay {
+  opacity: 1;
+  transform: scale(1);
+  transition: opacity 0.5s;
+}
+
+.modal_wrap input:checked ~ .modal_overlay .modal_content {
+  transform: translateY(20px);
+}
+
+.open_button {
+    cursor :pointer;
+    transition: all 0.3s;
+    /* display: block; */
+    max-width:300px;
+    text-decoration: none;
+}
+
+.open-button:active {
+  /*ボタンを押したとき*/
+  -webkit-transform: translateY(2px);
+  transform: translateY(2px);/*下に動く*/
+}
+
+
+.modal_title2 {
+  font-size: 1.5em;
+	position: relative;
+	overflow: hidden;
+  padding-bottom: 10px;
+  margin-top:0;
+  margin-bottom: 0;
+
+  line-height: 2;
+}
+
+.modal_title2::before,
+.modal_title2::after{
+	content: "";
+	position: absolute;
+	bottom: 0;
+}
+
+/* h2 プライマリカラー*/
+.modal_title2:before{
+	border-bottom: 4px solid  rgb(227, 205, 193);
+	width: 100%;
+}
+
+.modal_img img {
+    width: 200px;
+    /* width: 30%; */
+}
+
+.textbox {
+    width: 30%;
+    padding-left: 10px;
+}
+
+.textbox2 {
+    width: 50%;
+}
+
+
+.modal_img {
+    padding: 2rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.img1 {
+    display: flex;
+    align-items: center;
+}
+
+.img1 img:nth-child(1) {
+    padding-right: 5%;
+}
+
+
+
+.sumaho {
+    display: none;
+}
+
+.sumaho1 {
+    display: none;
+}
+
+
+/* レスポンシブ */
+
+@media screen and (min-width:600px)and (max-width:1117px) {
+    .box-1 {
+        flex-direction: column;
+    }
+
+    .icon {
+        margin: 0 auto 24px auto;
+    }
+
+    .modal_img {
+        display: flex;
+        flex-direction: column;
+        padding: 1rem 0 0 0;
+    }
+
+    .img1 {
+        width: 40%;
+        align-items: center;
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .img1 img {
+        width: 100%;
+        padding: 5%;
+    }
+
+    .textbox,
+    .textbox2 {
+        width: 100%;
+        padding-top: 5%;
+    }
+
+}
+
+@media screen and (min-width:320px)and (max-width:600px) {
+    .box-1 {
+        flex-direction: column;
+    }
+
+    .con {
+        padding: 2rem 0 0 0;
+    }
+
+    .icon {
+        margin: 0 auto 24px auto;
+    }
+
+    .icon img {
+        height: 190px;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .headerimg li {
+        display: none;
+    }
+
+    .sumaho {
+        display: block;
+    }
+
+
+    .box-1 {
+        flex-direction: column;
+    }
+
+    .icon {
+        margin: 0 auto 24px auto;
+    }
+
+    .modal_img {
+        display: flex;
+        flex-direction: column;
+        padding: 1rem 0 0 0;
+    }
+
+    .modal_content {
+        width: 80%;
+    }
+
+    .img1 {
+        width: 40%;
+        align-items: center;
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .img1 img {
+        padding: 5%;
+    }
+
+    .modal_img img {
+        width: 200%;
+    }
+
+    .modal2 img {
+        width: 90%;
+    }
+
+    .sumaho1 img {
+        width: 100%;
+    }
+
+    .textbox,
+    .textbox2 {
+        width: 100%;
+        padding-top: 5%;
+    }
+
+    .sumaho1 {
+        display: block;
+    }
+
+    .pc {
+        display: none;
+    }
+
+}
+
+/* レスポンシブメニュー */
+/* レスポンシブ */
+
+/* レスポンシブ ナビゲーション */
+.nav {
+    background: #a0937d;
+    height: 100vh;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    z-index: 99;
+
+    /* ボタン押す前 */
+    bottom: 100%;
+    transition: all .8s;
+}
+
+.nav ul {
+    padding-top: 30vh;    
+}
+
+.btn {
+    padding: 4%;
+}
+
+.nav h3 {
+    color: #f5efe5;
+}
+
+.nav_active {
+    bottom: 0%;
+}
+
+/* ボタン */
+
+.button {
+    /* 見た目 */
+    background: url(../img/resicon1.png);
+    background-size: cover;
+    z-index: 999;
+    height: 100px;
+    width: 100px;
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    transition: all .5s;
+}
+
+.button2 {
+    background: url(../img/resicon2.png);
+    background-size:cover;
+    transition: all .5s;
+}
+
+
+/* お試しローディング */
+
+/* おためしローディング */
+/* Loading背景画面設定　*/
+#splash {
+    /*fixedで全面に固定*/
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      z-index: 9999;
+      background: #f4f4f4;
+      text-align:center;
+    }
+
+    
+    /* fadeUpをするアイコンの動き */
+    .fadeUp{
+    animation-name: fadeUpAnime;
+    animation-duration:0.5s;
+    animation-fill-mode:forwards;
+    opacity: 0;
+    }
+    
+    @keyframes fadeUpAnime{
+      from {
+        opacity: 0;
+      transform: translateY(100px);
+      }
+    
+      to {
+        opacity: 1;
+      transform: translateY(0);
+      }
+    }
+
+    /* aタグ 制作物リンク */
+
+    .modal_wrap a {
+        line-height: 3;
+    }

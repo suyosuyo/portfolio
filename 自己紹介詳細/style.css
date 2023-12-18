@@ -1,0 +1,383 @@
+@charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* 共通 */
+
+h3,
+a,
+li,
+h4,
+h1 {
+    /* 文字 */
+    font-family: 'Noto Sans JP', sans-serif;
+    font-family: 'Zen Maru Gothic', serif;
+    font-size: 16px;
+    text-decoration: none;
+    color: #665f51;
+}
+
+
+h3 {
+    color: #665f51;
+}
+
+
+html {
+    background: #f5efe5;
+
+    /* スクロールゆっくり */
+    scroll-behavior: smooth;
+}
+
+h3 {
+    line-height: 2;
+}
+
+section {
+    /* 横幅指定 */
+    margin: 4rem auto;
+    position: relative;
+
+    width: 70%;
+}
+
+
+/* header */
+
+.headerimg {
+    background: #e7d4b5;
+}
+
+header img {
+    width: 100%;
+    height: 10vh;
+
+}
+
+
+.content1 {
+    background:  rgba(231, 212, 181,.4);
+    border-radius: 50px;
+}
+
+.con {
+    padding: 2rem;
+}
+header {
+    width: 100%;
+}
+
+.headerimg ul {
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    width: 70%;
+    margin: 0 auto;
+    padding: 2%;
+}
+
+.headerimg h3 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #f4f4f4;
+    text-align: center;
+}
+
+.headerimg a div {
+    width: 120px;
+}
+
+/* hoverで下線 */
+.line {
+    padding-bottom: 4px;
+    position: relative;
+
+    &::after {
+        background-color: #f4f4f4;
+        bottom: 0;
+        content: '';
+        height: 4px;
+        position: absolute;
+        transition: .5s all;
+        width: 0;
+        border-radius: 10px;
+      }
+      
+      &:hover {
+        &:after {
+          width: 100%;
+        }
+}
+}
+  
+  .line{ 
+    &::after {
+    left: 50%;
+    transform: translateX(-50%)
+  }
+}
+
+.line2 {
+    display: block;
+    padding: 1rem;
+}
+
+
+/* メイン */
+.content1 {
+    background:  rgba(231, 212, 181,.4);
+    border-radius: 50px;
+}
+
+.con {
+    padding: 2rem;
+}
+
+.content1 h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 24px;
+}
+
+.fadein1,
+.fadein2 {
+    opacity: 0;
+    transition: opacity 1s;
+
+    animation: fadeinAnime 3s 1;
+    animation-fill-mode: both;
+}
+
+
+@keyframes fadeinAnime {
+    0%{ opacity: 0}
+    80%{ opacity: 1;}
+    100%{ opacity: 1;}
+  }
+
+.fadein2 {
+    transition-duration: 1s;
+}
+
+.icon img {
+    height: 350px;
+}
+
+.icon h4 {
+    text-align: center;
+}
+
+.box-1 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.text1 {
+    width: 50%;
+    margin: 2rem 0;
+}
+
+.icon {
+    width: 40%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.text1 a {
+    color: #665f51;
+}
+
+.text1 a:hover {
+    color: #f4f4f4;
+    transition: all .2s ease;
+}
+
+.seilink {
+    margin: 1rem;
+    text-align: right;
+}
+
+
+/* footer */
+footer nav {
+    height: 20vh;
+    background: url(./img/footer.png);
+    width: 100%;
+    background-size: 1000px;
+    background-position: bottom -60px left 10px;
+}
+
+
+  /* スクロールバー */
+
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+   
+  ::-webkit-scrollbar-thumb {
+    background: #a0937d;
+    border-radius: 5px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background:  rgba(231, 212, 181,.3);
+    border-radius: 5px;
+  }
+
+  /*  */
+
+  .sumaho {
+    display: none;
+}
+
+
+/* レスポンシブ */
+
+@media screen and (min-width:600px)and (max-width:1024px) {
+    .box-1 {
+        flex-direction: column;
+    }
+
+    .icon {
+        margin: 0 auto 24px auto;
+    }
+
+    .text1 {
+        width: 70%;
+        margin: 0 auto;
+    }
+
+}
+
+@media screen and (min-width:320px)and (max-width:600px) {
+    .box-1 {
+        flex-direction: column;
+    }
+
+    .con {
+        padding: 2rem 0 0 0;
+    }
+
+    .icon {
+        margin: 0 auto 24px auto;
+    }
+
+    .icon img {
+        height: 200px;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .headerimg li {
+        display: none;
+    }
+
+    .sumaho {
+        display: block;
+    }
+
+    .text1 {
+        width: 70%;
+        margin: 0 auto 2rem auto;
+    }
+
+    .line2 {
+        padding: 0;
+    }
+
+}
+
+
+/* レスポンシブ ナビゲーション */
+.nav {
+    background: #a0937d;
+    height: 100vh;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    z-index: 99;
+
+    /* ボタン押す前 */
+    bottom: 100%;
+    transition: all .8s;
+}
+
+.nav ul {
+    padding-top: 30vh;    
+}
+
+.btn {
+    padding: 4%;
+}
+
+.nav h3 {
+    color: #f5efe5;
+}
+
+.nav_active {
+    bottom: 0%;
+}
+
+/* ボタン */
+
+.button {
+    /* 見た目 */
+    background: url(../img/resicon1.png);
+    background-size: cover;
+    z-index: 999;
+    height: 100px;
+    width: 100px;
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    transition: all .5s;
+}
+
+.button2 {
+    background: url(../img/resicon2.png);
+    background-size:cover;
+    transition: all .5s;
+}
+
+/* お試しローディング */
+
+/* おためしローディング */
+/* Loading背景画面設定　*/
+#splash {
+    /*fixedで全面に固定*/
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      z-index: 9999;
+      background: #f4f4f4;
+      text-align:center;
+    }
+    
+    
+    /* fadeUpをするアイコンの動き */
+    .fadeUp{
+    animation-name: fadeUpAnime;
+    animation-duration:0.5s;
+    animation-fill-mode:forwards;
+    opacity: 0;
+    }
+    
+    @keyframes fadeUpAnime{
+      from {
+        opacity: 0;
+      transform: translateY(100px);
+      }
+    
+      to {
+        opacity: 1;
+      transform: translateY(0);
+      }
+    }

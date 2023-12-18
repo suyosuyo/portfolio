@@ -1,0 +1,686 @@
+@charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* 共通 */
+
+h3,
+a {
+    /* 文字 */
+    font-family: 'Noto Sans JP', sans-serif;
+    font-family: 'Zen Maru Gothic', serif;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+h3 {
+    color: #665f51;
+}
+
+.secscr a {
+    color:  rgb(227, 205, 193);
+}
+
+html {
+    background: #f5efe5;
+
+    /* スクロールゆっくり */
+    scroll-behavior: smooth;
+}
+
+h3 {
+    line-height: 2;
+}
+
+section {
+    /* 横幅指定 */
+    height: 100vh;
+    margin: 0 auto;
+    position: relative;
+}
+
+
+/* おためしローディング */
+/* Loading背景画面設定　*/
+#splash {
+  /*fixedで全面に固定*/
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background: #f4f4f4;
+    text-align:center;
+  }
+  
+  
+  /* fadeUpをするアイコンの動き */
+  .fadeUp{
+  animation-name: fadeUpAnime;
+  animation-duration:0.5s;
+  animation-fill-mode:forwards;
+  opacity: 0;
+  }
+  
+  @keyframes fadeUpAnime{
+    from {
+      opacity: 0;
+    transform: translateY(100px);
+    }
+  
+    to {
+      opacity: 1;
+    transform: translateY(0);
+    }
+  }
+
+
+/* 横スクロール */
+/* .item {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.scroll1{
+    overflow: hidden;
+  }
+
+.scroll2{
+    display: flex;
+  } */
+
+    /* ぴたっスクロール */
+
+    /* .mainscr {
+        overflow: auto;
+        scroll-snap-type: y mandatory;
+        height: 100vh;
+      }
+      .secscr {
+        scroll-snap-align: start;
+        height: 100vh;
+      } */
+
+/* ナビゲーション */
+
+.nav-2 {
+    list-style: none;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.nav-1 {
+    position: fixed;
+    bottom: 5%;
+    width: 100%;
+    z-index: 3;
+}
+
+li {
+    text-decoration: none;
+}
+
+.sumaho {
+    display: none;
+}
+
+
+
+/* メイン */
+
+/* セクション 共通 */
+
+.box1 {
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+    margin: 0 auto;
+
+    /* 中央表示 */
+    position: absolute;
+    top: 47%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+
+}
+
+div img {
+    width: 100%;
+}
+
+.box-left1,
+.box-right1 {
+    width: 50%;
+}
+
+/* 左側 */
+.text1 {
+    margin: 10% 0;
+    position: relative;
+    padding-left: 24px;
+}
+
+.pic {
+    margin-top: 10%;
+}
+
+
+.read a {
+    position: absolute;
+    right: 0;
+    color: #665f51;
+    display: block;
+    padding: 1rem;
+}
+
+/* 右側 */
+
+/* １セクションめ */
+.fuwa1 img {
+    animation: change-img-anim 3s 1;
+    position: absolute;
+}
+
+
+.fuwa1 {
+    position: relative;
+}
+
+.fuwa2 img {
+    animation: change-img-anim2 3s 1;
+    position: absolute;
+    opacity: 0;
+}
+
+.image:nth-of-type(1) {
+  animation-delay: 0s;
+}
+.image:nth-of-type(2) {
+  animation-delay: .5s;
+}
+.image:nth-of-type(3) {
+    animation-delay: 1s;
+  }
+  .image:nth-of-type(4) {
+    animation-delay: 1.5s;
+  }
+.image:nth-of-type(5) {
+  animation-delay: 2.5s;
+  animation-fill-mode: both;
+}
+
+@keyframes change-img-anim2 {
+  0%{ opacity: 0}
+  30%{ opacity: 0;}
+  36%{ opacity: 0.5;}
+  45%{ opacity: 1;}
+  100%{ opacity: 1;}
+}
+
+
+/* 2セクションめ */
+
+.image2:nth-of-type(1) {
+    animation-delay: 0s;
+    animation: change-img-anim-first 3s 1;
+    animation-fill-mode: both;
+  }
+
+  .image2:nth-of-type(2) {
+    animation-delay: 1s;
+    animation-fill-mode: both;
+  }
+
+  @keyframes change-img-anim-first {
+    0%{ opacity: 1;}
+    30%{ opacity: 1;}
+    36%{ opacity: 1;}
+    45%{ opacity: 1;}
+    100%{ opacity: 0;}
+  }
+
+  @keyframes change-img-anim {
+    0%{ opacity: 0;}
+    30%{ opacity: 0;}
+    36%{ opacity: 1;}
+    45%{ opacity: 1;}
+    100%{ opacity: 1;}
+  }
+
+
+  /* 3セクションめ */
+  .image3 {
+    animation-delay: 0s;
+    animation: changeimg 3s 1;
+    animation-fill-mode: both;
+  }
+
+  @keyframes changeimg {
+    0%{ opacity: 0;}
+    30%{ opacity: 0;}
+    36%{ opacity: 1;}
+    45%{ opacity: 1;}
+    100%{ opacity: 1;}
+  }
+
+  /* 4セクションめ */
+  .image4:nth-of-type(1) {
+    animation-delay: 0s;
+    animation: animation4 10s infinite;
+  }
+
+  .image4:nth-of-type(2) {
+    opacity: 1;
+  }
+
+  @keyframes animation4 {
+    0%{ opacity: 1;}
+    20%{ opacity: 0;}
+    40%{ opacity: 1;}
+    60%{ opacity: 0;}
+    80%{ opacity: 1;}
+    100%{ opacity: 0;}
+  }
+
+
+  /* 5セクションめ */
+  .image5:nth-of-type(1) {
+    animation-delay: 0s;
+    animation: animation5 10s infinite;
+  }
+
+  .image5:nth-of-type(2) {
+    animation-delay: 0s;
+    animation: animation52 10s infinite;
+  }
+
+  @keyframes animation5 {
+    0%{ opacity: 1;}
+    20%{ opacity: 0;}
+    40%{ opacity: 1;}
+    60%{ opacity: 0;}
+    80%{ opacity: 1;}
+    100%{ opacity: 0;}
+  }
+
+  @keyframes animation52 {
+    0%{ opacity: 0;}
+    20%{ opacity: 1;}
+    40%{ opacity: 0;}
+    60%{ opacity: 1;}
+    80%{ opacity: 0;}
+    100%{ opacity: 1;}
+  }
+
+
+
+
+/* 洗濯物 */
+
+
+.box2 {
+  background: url(./img/sec2-0.png);
+  background-position: left 100px top 0;
+  background-size: 30%;
+  background-repeat: no-repeat;
+  height: 400px;
+}
+
+.box3 {
+  background: url(./img/sec3-0.png);
+  background-position: left 140px top 0;
+  background-size: 25%;
+  background-repeat: no-repeat;
+  height: 400px;
+}
+
+.box4 {
+  background: url(./img/sec4-0.png);
+  background-position: left 80px top 40px;
+  background-size: 25%;
+  background-repeat: no-repeat;
+  height: 500px;
+}
+
+.box5 {
+  background: url(./img/sec5-0.png);
+  background-position: left 60px top 80px;
+  background-size: 25%;
+  background-repeat: no-repeat;
+  height: 500px;
+}
+
+
+
+/* アニメーション ふわっと出てくる */
+/* section2以降 */
+/* .fadein1, */
+/* .fadein2,
+.fadein3 {
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.fadein1 {
+  display: none;
+  transition: opacity 1s;
+}
+
+
+.fadein2 {
+    transition-delay: .5s;
+}
+
+.fadein3 {
+    transition-delay: .7s;
+} */
+
+
+
+/* ふわ */
+
+.fadein1,
+.fadein2,
+.fadein3 {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 1s,visibility 1s, transform 1s;
+}
+
+.img2 {
+  display: none;
+}
+
+.fadein2 {
+  transition-delay: .5s;
+}
+
+.fadein3 {
+  transition-delay: .7s;
+} 
+
+.scroll {
+  opacity: 1;
+  visibility: visible;
+  display: block;
+}
+
+/* セクション１ アニメーション */
+.anime1,
+.anime2,
+.anime3{
+    animation-name:fadeInAnime;
+    animation-duration:1s;
+    animation-fill-mode:forwards;
+    opacity:0;
+    }
+    
+    @keyframes fadeInAnime{
+      from {
+        opacity: 0;
+      }
+    
+      to {
+        opacity: 1;
+      }
+    }
+
+.anime2 {
+    animation-delay: 3.5s;
+}
+
+.anime3 {
+    animation-delay: 4s;
+}
+
+/* 最終セクション 夜 */
+.dream {
+  background-color: rgb(227, 205, 193);
+}
+
+.dream img {
+  width: 100%;
+  height: 50vh;
+}
+
+.night {
+    background:  rgb(227, 205, 193);
+}
+
+  footer {
+    background:   rgb(227, 205, 193);
+    /* height: 50vh; */
+  }
+
+.mail img {
+    width: 48px;
+    padding-right: 20px;
+    vertical-align: sub;
+}
+
+.mail {
+    margin: 20%;
+    text-align: center;
+}
+
+.mail a {
+    color: #665f51;
+    font-size: 24px;
+}
+
+.last {
+    margin-top: 4rem;
+}
+
+footer img {
+  width: 100%;
+  vertical-align:top;
+}
+
+  /* ナビゲーションアイコン  */
+
+.pop {
+    background: #a0937d;
+    border-radius: 50px;
+    width: 20px;
+    height: 20px;
+}
+
+
+.b1 {
+  display: block;
+  padding: 1rem;
+}
+
+/* .block {
+    z-index: 2;
+    animation: fadeIn linear both;
+  animation-timeline: view(block);
+  animation-range: entry 25% cover 50%;
+} */
+
+
+
+
+  /* スクロールバー */
+
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+   
+  ::-webkit-scrollbar-thumb {
+    background: #a0937d;
+    border-radius: 5px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background:  rgba(231, 212, 181,.3);
+    border-radius: 5px;
+  }
+
+
+
+/* レスポンシブ */
+
+/* レスポンシブ ナビゲーション */
+.nav {
+    background: #a0937d;
+    height: 100vh;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    z-index: 99;
+
+    /* ボタン押す前 */
+    bottom: 100%;
+    transition: all .8s;
+}
+
+.nav ul {
+    padding-top: 25vh;    
+}
+
+.btn {
+    padding: 4%;
+}
+
+.nav h3 {
+    color: #f5efe5;
+}
+
+.nav_active {
+    bottom: 0%;
+}
+
+/* ボタン */
+
+
+.button {
+  /* 見た目 */
+  background: url(./img/resicon1.png);
+  background-size: cover;
+  z-index: 999;
+  height: 100px;
+  width: 100px;
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  transition: all .5s;
+}
+
+.button2 {
+  background: url(./img/resicon2.png);
+  background-size:cover;
+  transition: all .5s;
+}
+
+/* レスポンシブ */
+
+@media screen and (min-width:638px)and (max-width:1015px) {
+  .mail {
+    margin: 6% auto 20% auto
+}
+
+.dream img {
+  height: 30vh;
+}
+
+}
+
+
+/* スマホ */
+
+@media screen  and (min-width:320px) and (max-width:638px) {
+  .mail {
+    margin: 6% auto 20% auto
+}
+
+  .nav-1,
+  .nav-2,
+  .kurikku {
+    display: none;
+  }
+  
+  .sumaho {
+    display: block;
+}
+
+  .box1 {
+    /* display: block; */
+    flex-direction: column-reverse;
+    transform: translate(-50%,-17%);
+  }
+
+  .box-right1 img {
+    transform: translate(32%,-75%);
+    width: 60%;
+  }
+
+  .pic img {
+    width: 70%;
+    transform: translate(20%,37%);
+  }
+
+  section {
+    position: relative;
+  }
+
+
+  .box-right1,
+    .box-left1 {
+      width: 100%;
+    }
+
+  .pic {
+    margin-top: 0;
+  }
+
+    .fuwa1 {
+      position: relative;
+    }
+
+    .fuwa1 img {
+      position: absolute;
+    }
+
+    .dream img {
+      height: 20vh;
+    }
+
+
+    /* 洗濯物 */
+    .box2 {
+      background-position: left 15% top 0;
+      background-size: 40%;
+    }
+    
+    .box3 {
+      background-position: left 20% top 16%;
+      background-size: 30%;
+    }
+    
+    .box4 {
+      background-position: left 10% top 20%;
+      background-size: 35%;
+    }
+    
+    .box5 {
+      background-position: left 15% top 13%;
+      background-size: 40%;
+    }
+
+    .last {
+      margin: 0;
+    }
+    
+}
+
