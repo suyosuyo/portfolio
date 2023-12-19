@@ -10,84 +10,38 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&family=Zen+Maru+Gothic&display=swap" rel="stylesheet">
 
     <!-- ファビコン -->
-    <link rel="icon" href="./img/favicon.ico" />
-    <link rel="apple-touch-icon" sizes="180x180" href="./img/favicon.ico">
+    <link rel="icon" href="../img/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../img/favicon.ico">
 
     <!-- script jquery -->
     <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
     <script src="./main.js"></script>
 
-
-    <!-- 横スクロール -->
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script> -->
-
     <!-- css -->
     <link rel="stylesheet" href="./style.css">
 
-    <title>ポートフォリオ</title>
-
+    <title>今までの制作物</title>
 </head>
-<body class="scroll scroll1">
-
+<body>
 
     <div id="splash">
         <div id="splash_logo"></div>
     </div>
 
-    <!-- ヘッダー -->
-
     <header>
 
-        <!-- ナビゲーション -->
-
-
-        <nav class="nav-1">
-            <ul class="nav-2">
-                <li>
-                    <a href="#section1" class="box01 b1">
-                        <div class="pop1">
-                            <div class="pop"></div>
-                        </div>
-                    </a>
-                </li>
-
-                <li>
-                    <a href="#section2"  class="box02 b1">
-                        <div class="pop1">
-                            <div class="pop"></div>
-                        </div>
-                    </a>
-                </li>
-
-                <li>
-                    <a href="#section3"  class="box03 b1">
-                        <div class="pop1">
-                            <div class="pop"></div>
-                        </div>
-                    </a>
-                </li>
-
-                <li>
-                    <a href="#section4"  class="box04 b1">
-                        <div class="pop1">
-                            <div class="pop"></div>
-                        </div>
-                    </a>
-                </li>
-
-                <li>
-                    <a href="#section5"  class="box05 b1">
-                        <div class="pop1">
-                            <div class="pop"></div>
-                        </div>
-                    </a>
-                </li>
-            </ul>
+        <nav class="headerimg">
+            <nav>
+                <ul>
+                    <li><a href="../index.html" class="line"><div><h3>TOP</h3></div></a></li>
+                    <li><a href="../自己紹介詳細/index.html" class="line"><div><h3><ruby>自己紹介<rt>じこしょうかい</rt></ruby></h3></div></a></li>
+                    <li><a href="../制作物/index.html" class="line"><div><h3><ruby>制作物<rt>せいさくぶつ</rt></ruby></h3></div></a></li>
+                </ul>
+            </nav>
         </nav>
+        <img src="./img/wave.png" alt="">
 
-        <!-- スマホナビゲーション 500px -->
-
+        <!-- sumaho -->
         <nav class="sumaho">
             <nav class="button" id="target"></nav>
 
@@ -95,32 +49,20 @@
 
                 <ul>
                     <li>
-                        <a href="#section1">
-                            <div class="btn"><h3>ごあいさつ</h3></div>
+                        <a href="../index.html">
+                            <div class="btn"><h3>トップページ</h3></div>
                         </a>
                     </li>
 
                     <li>
-                        <a href="#section2">
-                            <div class="btn"><h3>お<ruby>仕事<rt>しごと</rt></ruby>について</h3></div>
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="#section3">
+                        <a href="../自己紹介詳細/index.html">
                             <div class="btn"><h3><ruby>自己紹介<rt>じこしょうかい</rt></ruby></h3></div>
                         </a>
                     </li>
 
                     <li>
-                        <a href="#section4">
+                        <a href="./index.html">
                             <div class="btn"><h3><ruby>制作物<rt>せいさくぶつ</rt></ruby></h3></div>
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="#section5">
-                            <div class="btn"><h3>お<ruby>問<rt>と</rt></ruby>い<ruby>合<rt>あ</rt></ruby>わせ</h3></div>
                         </a>
                     </li>
 
@@ -129,253 +71,149 @@
             </nav>
         </nav>
 
-
     </header>
 
+    <main>
 
-    <!-- メイン -->
-    
-    <main class="mainscr scroll2">
+        <section>
 
-        
+            <div class="content1 fadein1">
 
-        <!-- 一枚目 -->
+                <div class="con">
+                    <h1 class="fadein1"><ruby>制作物<rt>せいさくぶつ</rt></ruby></h1>
 
-        <section class="first secscr item" id="section1">
-
-            <div class="box1">
-
-                <!-- 左 -->
-                <div class="box-left1">
-
-                    <div class="pic">
-                        <img src="./img/sec01.png" alt="はじめまして" class="anime2">
-                    </div>
-                
-                    <div class="text1 anime3">
-                        <h3>
-                            ポートフォリオをご<ruby>覧<rt>らん</rt></ruby>いただき、ありがとうございます。
-                        </h3>
-                        <h3>
-                            おおたに まゆみ と<ruby>申<rt>もう</rt></ruby>します。
-                        </h3>
-                        <h3>
-                            <ruby>最後<rt>さいご</rt></ruby>までご<ruby>覧<rt>らん</rt></ruby>いただければ<ruby>幸<rt>さいわ</rt></ruby>いです。
-                        </h3>
-                        <h3 class="kurikku">
-                            <ruby>下<rt>した</rt></ruby>の<ruby>丸<rt>まる</rt></ruby>いボタンをクリックして、お<ruby>進<rt>すす</rt></ruby>みください。
-                        </h3>
-                    </div>
-                
-                </div>
-
-                <!-- 右 -->
-                <div class="box-right1">
-                    <div class="anime1 fuwa1 fuwa2">
-                        <img src="./img/sec1-2.png" class="image" alt="まばたき１">
-                        <img src="./img/sec1-1.png" class="image" alt="まばたき２">
-                        <img src="./img/sec1-2.png" class="image" alt="まばたき１">
-                        <img src="./img/sec1-1.png" class="image" alt="まばたき２">
-                        <img src="./img/sec1-3.png" class="image" alt="手を振る">
-                    </div>
-                </div>
-
-            </div>
-
-        </section>
+                    <div class="box-1 fadein2">
 
 
-        <!-- 二枚目 -->
+                        <!-- きたすい -->
+                        <div class="modal_wrap">
+                            <input id="trigger" type="checkbox">
+                                <div class="modal_overlay">
+                                    <label for="trigger" class="modal_trigger"></label>
+                                    <div class="modal_content">
+                                        <label for="trigger" class="close_button">✖️</label>
+                                        <p class="modal_title2">きたかんとう水族館(チーム制作)</p>
+                                        <div class="modal_img">
+                                            <div class="img1">
+                                                <img src="./img/kitakanHP2.png" alt="" class="pc">
+                                                <img src="./img/kitakanHP3.png" alt="" class="pc">
 
-        <section class="second secscr item" id="section2">
-            <div class="box2 fadein1"></div>
-            <div class="box1">
-
-                <!-- 左 -->
-                <div class="box-left1">
-
-                    <div class="pic">
-                        <img src="./img/sec02.png" alt="お仕事について"  class="fadein2">
-                    </div>
-                
-                    <div class="text1 fadein3">
-                        <h3>
-                            <ruby>前職<rt>ぜんしょく</rt></ruby>では、<ruby>介護福祉士<rt>かいごふくしし</rt></ruby>をしていました。
-                            <ruby>引<rt>ひ</rt></ruby>っ<ruby>越<rt>こ</rt></ruby>しが<ruby>決<rt>き</rt></ruby>まったとき、
-                            なにか<ruby>別<rt>べつ</rt></ruby>のことにも<ruby>挑戦<rt>ちょうせん</rt></ruby>してみたいと<ruby>考<rt>かんが</rt></ruby>え、プログラミングに<ruby>手<rt>て</rt></ruby>を<ruby>出<rt>だ</rt></ruby>しました。
-                            まだまだ<ruby>経験不足<rt>けいけんぶそく</rt></ruby>ではありますが、<ruby>身<rt>み</rt></ruby>に<ruby>付<rt>つ</rt></ruby>けられるように
-                            <ruby>頑張<rt>がんば</rt></ruby>っています。
-                        </h3>
-                    </div>
-                
-                </div>
-
-                <!-- 右 -->
-                <div class="box-right1">
-                    <div class="fuwa1 fadein1 img2">
-                        <img src="./img/sec2-1.png"  class="image2" alt="洗濯物を干す１">
-                        <img src="./img/sec2-2.png"  class="image2" alt="洗濯物を干す２">
-                    </div>
-                </div>
-
-            </div>
-
-        </section>
-
-        
-        
-
-        <!-- 三枚目 -->
-    
-        <section class="third secscr item" id="section3">
-            <div class="box3 fadein1"></div>
-            <div class="box1">
-
-                <!-- 左 -->
-                <div class="box-left1">
-
-                    <div class="pic">
-                        <img src="./img/sec03.png" alt="自己紹介" class="fadein2">
-                    </div>
-                
-                    <div class="text1  fadein3 read">
-                        <h3>
-                            <ruby>食<rt>た</rt></ruby>べることが<ruby>好<rt>す</rt></ruby>きです。<ruby>同居人<rt>どうきょにん</rt></ruby>と、
-                            おいしいものを<ruby>食<rt>た</rt></ruby>べることが<ruby>最近<rt>さいきん</rt></ruby>の<ruby>幸<rt>しあわ</rt></ruby>せです。
-                            お<ruby>休<rt>やす</rt></ruby>みの<ruby>日<rt>ひ</rt></ruby>には、ドライブをしながらスタバの<ruby>新作<rt>しんさく</rt></ruby>を
-                            <ruby>飲<rt>の</rt></ruby>んだり、アニメやドラマを<ruby>一気見<rt>いっきみ</rt></ruby>しています。
-                            <ruby>最近<rt>さいきん</rt></ruby>は、〇を<ruby>見<rt>み</rt></ruby>ています。
-                        </h3>
-                        <a href="./自己紹介詳細/index.html">... Read more</a>
-                    </div>
-                
-                </div>
-
-                <!-- 右 -->
-                <div class="box-right1">
-                    <div class="fuwa1 fadein1">
-                        <img src="./img/sec3.png"  class="image3" alt="食べる">
-                    </div>
-                </div>
-
-            </div>
-        </section>
-
-        <!-- 四枚目 -->
-
-        <section class="first secscr item" id="section4">
-            <div class="box4 fadein1"></div>
-            <div class="box1">
-
-                <!-- 左 -->
-                <div class="box-left1">
-
-                    <div class="pic">
-                        <img src="./img/sec04.png" alt="制作物" class="fadein2">
-                    </div>
-                
-                    <div class="text1 fadein3 read">
-                        <h3>
-                            <ruby>学校<rt>がっこう</rt></ruby>での<ruby>制作物<rt>せいさくぶつ</rt></ruby>をまとめました。
-                            <ruby>少<rt>すく</rt></ruby>なくはありますが、ご<ruby>覧<rt>らん</rt></ruby>いただけると<ruby>幸<rt>さいわ</rt></ruby>いです。
-                        </h3>
-                        <a href="./制作物/index.html">... Read more</a>
-                    </div>
-                
-                </div>
-
-                <!-- 右 -->
-                <div class="box-right1">
-                    <div class="fuwa1 fadein1">
-                        <img src="./img/sec4-1.png"  class="image4" alt="湯気とお風呂">
-                        <img src="./img/sec4-2.png"  class="image4" alt="湯気とお風呂">
-                    </div>
-                </div>
-
-            </div>
-
-        </section>
-        <div class="dream">
-            <img src="./img/dream.png" alt="夢">
-        </div>
-
-        <!-- 五枚目 -->
- 
-        <section class="first secscr item  night" id="section5">
-            <div class="box5 fadein1"></div>
-            <div class="box1 last">
-
-                <!-- 左 -->
-                <div class="box-left1">
-
-                    <div class="pic">
-                        <img src="./img/sec05.png" alt="見てくださり、ありがとうございました" class="fadein2">
-                    </div>
-                
-                    <div class="text1 fadein3">
-                        <h3>
-                            ここまでご<ruby>覧<rt>らん</rt></ruby>いただき、ありがとうございました。
-                            なにかございましたら、<ruby>下記<rt>かき</rt></ruby>よりお<ruby>気軽<rt>きがる</rt></ruby>にご<ruby>連絡<rt>れんらく</rt></ruby>ください。
-                        </h3>
-                        <div class="mail">
-                            <a href="mailto:">
-                                <img src="./img/mail.png" alt="メール">
-                                お問い合わせ
-                            </a>
+                                                <img src="./img/kitakanHP.png" alt="" class="sumaho1">
+                                            </div>
+                                            <div class="textbox">
+                                                <h3>学校でのチーム制作で作成しました。</h3>
+                                                <h3>TOPページ、ニュースの部分を担当しました。他の方と協力して作成するのは大変でしたが、とても
+                                                    勉強になり、楽しかったです。</h3>
+                                                <!-- <h3>https://</h3> -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                         </div>
-                    </div>
-                
-                </div>
 
-                <!-- 右 -->
-                <div class="box-right1">
-                    <div class="fuwa1 fadein1">
-                        <img src="./img/sec5-1.png"  class="image5" alt="寝てる">
-                        <img src="./img/sec5-2.png"  class="image5" alt="寝てる">
+
+                        <div class="icon">
+                            <label for="trigger" class="open_button" ><img src="./img/kitakanicon.png" alt=""></label>
+                            <div>
+                                <h4>きたかんとう水族館<br>(チーム制作)</h4>
+                            </div>
+                        </div>
+
+
+                        <!-- 自己紹介 -->
+
+                        <div class="modal_wrap">
+                            <input id="HPsite" type="checkbox">
+                                <div class="modal_overlay">
+                                    <label for="HPsite" class="modal_trigger"></label>
+                                    <div class="modal_content">
+                                        <label for="HPsite" class="close_button">✖️</label>
+                                        <p class="modal_title2">自己紹介サイト</p>
+                                        <div class="modal_img modal2">
+                                            <img src="./img/HP.png" alt="">
+                                            <div class="textbox2">
+                                                <h3>学校での初めての制作物です。</h3>
+                                                <h3>好きなキャラクターをイメージしたサイトを作成しました。可愛いキャラクターなので、フォントや文字数にこだわりました。
+                                                    著作権の関係で、白いウサギに変更しています。
+                                                </h3>
+                                                <a href="https://suyosuyo.github.io/zikosyoukai/" target="_blank">...サイトを見てみる</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                        </div>
+
+                        <div class="icon">
+                            <label for="HPsite" class="open_button" ><img src="./img/HPicon.png" alt=""></label>
+                            <div>
+                                <h4>自己紹介サイト</h4>
+                            </div>
+                        </div>
+
+                        <!-- ？？ -->
+
+                        <div class="modal_wrap">
+                            <input id="mo" type="checkbox">
+                                <div class="modal_overlay">
+                                    <label for="mo" class="modal_trigger"></label>
+                                    <div class="modal_content">
+                                        <label for="mo" class="close_button">✖️</label>
+                                        <p class="modal_title2">告白チャレンジゲーム</p>
+                                        <div class="modal_img modal2">
+                                            <img src="./img/game.png" alt="">
+                                            <div class="textbox2">
+                                                <h3>javascriptを使用したゲーム制作物です。</h3>
+                                                <h3>選択肢でエンディングが変わるシュミレーションゲームを作成しました。イラストはフリーの物を使用させて頂いています。
+                                                    選択が遅れると表情も変更するところなどをこだわり、作成しました。</h3>
+                                                <a href="https://suyosuyo.github.io/game/" target="_blank">...サイトを見てみる</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                        </div>
+
+                        <div class="icon">
+                            <label for="mo" class="open_button" ><img src="./img/gameicon.png" alt=""></label>
+                            <div>
+                                <h4>告白チャレンジゲーム</h4>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
 
             </div>
 
         </section>
-    
+
+        <footer>
+
+            <nav>
+
+            </nav>
+
+        </footer>
+
     </main>
 
-    <!-- フッター -->
-    <footer>
-            <img src="./img/footer.png" alt="夜の空の上">
-    </footer>
-    
-    <!-- レスポンシブ ナビ -->
     <script>
-
-// ナビゲーションが消える
-$(window).scroll(function () {
-    var check = window.pageYOffset; //現在のスクロール位置を取得
-    var docHeight = $(document).height(); //ページ全体の高さを取得
-    var dispHeight = $(window).height(); //表示されている高さを取得
-    if(check > docHeight-dispHeight-60){ //消えるときのフッターからの距離を数字で調整※サイトに合わせて変更
-      $('.nav-1').fadeOut(300); //数字が大きいほどゆっくり消える
-    }else{
-      $('.nav-1').fadeIn(300); //数字が大きいほどゆっくり出る
-    }
-  });
-
-
-
-$(function () {
-  $('#target').click(() => {
-    $('#target').toggleClass('button2');
-    $('#resnav').toggleClass('nav_active');
-  });
-  // ナビ内リンクでジャンプ時、メニューを閉じる
-
-  $('.btn').click(() => {
-    $('#target').removeClass('button2');
-    $('#resnav').removeClass('nav_active');
-  });
-});
-    </script>
-    
+        //         $('#target').click(()=>{
+        //   $('#target').toggleClass('button2');
+        //   $('#resnav').toggleClass('nav_active');
+        // });
+        
+        $(function () {
+          $('#target').click(() => {
+            $('#target').toggleClass('button2');
+            $('#resnav').toggleClass('nav_active');
+          });
+          // ナビ内リンクでジャンプ時、メニューを閉じる
+        
+          $('.btn').click(() => {
+            $('#target').removeClass('button2');
+            $('#resnav').removeClass('nav_active');
+          });
+        });
+            </script>
 </body>
 </html>
