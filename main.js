@@ -14,7 +14,7 @@ window.addEventListener('scroll', function () {
   }
 }); 
 
-// ナビゲーション量でのアイコン変化はサイト構成のブクマに入ってる
+
 
 
 // レスポンシブ ナビゲーション

@@ -186,7 +186,9 @@ header {
 label {
     display: inline-block;
     transition: .3s;
+
   }
+
   label:hover {
     transform: scale(0.9);
   }
@@ -273,6 +275,7 @@ footer nav {
   right: 25px;
   font-size: 24px;
   cursor: pointer;
+  /* background-color: rgba(0, 0, 0, 0.2); */
 }
 
 .modal_wrap input:checked ~ .modal_overlay {
