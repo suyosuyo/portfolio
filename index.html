@@ -44,7 +44,7 @@
                 <li>
                     <a href="#section1" class="box01 b1">
                         <div class="pop1">
-                            <div class="pop"></div>
+                            <div class="pop popno1"></div>
                             <div class="popimg popimg1" id="0pop"></div>
                         </div>
                     </a>
@@ -53,7 +53,7 @@
                 <li>
                     <a href="#section2"  class="box02 b1">
                         <div class="pop1">
-                            <div class="pop"></div>
+                            <div class="pop popno2"></div>
                             <div class="popimg popimg2" id="1pop"></div>
                         </div>
                     </a>
@@ -62,7 +62,7 @@
                 <li>
                     <a href="#section3"  class="box03 b1">
                         <div class="pop1">
-                            <div class="pop"></div>
+                            <div class="pop popno3"></div>
                             <div class="popimg popimg3" id="2pop"></div>
                         </div>
                     </a>
@@ -71,7 +71,7 @@
                 <li>
                     <a href="#section4"  class="box04 b1">
                         <div class="pop1">
-                            <div class="pop"></div>
+                            <div class="pop popno4"></div>
                             <div class="popimg popimg4" id="3pop"></div>
                         </div>
                     </a>
@@ -80,7 +80,7 @@
                 <li>
                     <a href="#section5"  class="box05 b1">
                         <div class="pop1">
-                            <div class="pop"></div>
+                            <div class="pop popno5"></div>
                             <div class="popimg popimg5" id="4pop"></div>
                         </div>
                     </a>
@@ -366,67 +366,6 @@ $(window).scroll(function () {
 
 //   ナビゲーション変わる
 
-//   const pop = document.getElementsByClassName('pop');
-
-//   const head = document.getElementById('0pop');
-//   const head2 = document.getElementById('1pop');
-//   const head3 = document.getElementById('2pop');
-//   const head4 = document.getElementById('3pop');
-//   const head5 = document.getElementById('4pop');
-
-
-// let boxHeight = document.getElementById('section1').clientHeight;
-// let boxHeight2 = document.getElementById('section2').offsetHeight;
-// let boxHeight3 = document.getElementById('section3').clientHeight;
-// let boxHeight4 = document.getElementById('section4').clientHeight;
-// let boxHeight5 = document.getElementById('section5').clientHeight;
-
-// window.addEventListener('scroll', function () {
-//     let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-    
-//     // 1セクション目
-//     if (scrollTop <= boxHeight-300) {
-//         head.style.visibility = 'visible';
-
-//     } else {
-//         head.style.visibility = 'hidden';
-//     }
-
-//     // 2セクション目
-//     if (scrollTop <= boxHeight-300) {
-//         head2.style.visibility = 'hidden';
-
-//     } else {
-//         head2.style.visibility = 'visible';
-//     }
-
-    // 3セクション目
-    // if (scrollTop <= boxHeight3-300) {
-    //     head3.style.visibility = 'visible';
-
-    // } else if(scrollTop <= boxHeight4-300){
-    //     head3.style.visibility = 'hidden';
-
-    // }else {
-    //     head3.style.visibility = 'hidden';
-    // }
-
-    // // 4セクション目
-    // if (scrollTop <= boxHeight4-300) {
-    //     head4.style.visibility = 'hidden';
-
-    // } else {
-    //     head4.style.visibility = 'visible';
-    // }
-
-    // // 5セクション目
-    // if (scrollTop <= boxHeight5-300) {
-    //     head5.style.visibility = 'hidden';
-
-    // } else {
-    //     head5.style.visibility = 'visible';
-    // }
-// });
 
 $(window).on("scroll", function () {
 
@@ -436,29 +375,57 @@ $(window).on("scroll", function () {
         $(".popimg3").fadeOut();
         $(".popimg4").fadeOut();
         $(".popimg5").fadeOut();
+        
+        // pop
+        $(".popno2").fadeOut();
+        $(".popno1").fadeIn();
+        $(".popno3").fadeIn();
+        $(".popno4").fadeIn();
+        $(".popno5").fadeIn();
 
-    } else if (1000 < $(this).scrollTop() && 1800 > $(this).scrollTop()) {
+    } else if (999 < $(this).scrollTop() && 1800 > $(this).scrollTop()) {
         $(".popimg3").fadeIn();
         $(".popimg2").fadeOut();
         $(".popimg1").fadeOut();
         $(".popimg4").fadeOut();
         $(".popimg5").fadeOut();
 
-    } else if (1800 < $(this).scrollTop() && 2500 > $(this).scrollTop()) {
+        // pop
+        $(".popno3").fadeOut();
+        $(".popno1").fadeIn();
+        $(".popno2").fadeIn();
+        $(".popno4").fadeIn();
+        $(".popno5").fadeIn();
+
+    } else if (1799 < $(this).scrollTop() && 2500 > $(this).scrollTop()) {
         $(".popimg4").fadeIn();
         $(".popimg3").fadeOut();
         $(".popimg1").fadeOut();
         $(".popimg2").fadeOut();
         $(".popimg5").fadeOut();
+        
+        // pop
+        $(".popno4").fadeOut();
+        $(".popno1").fadeIn();
+        $(".popno2").fadeIn();
+        $(".popno3").fadeIn();
+        $(".popno5").fadeIn();
 
-    } else if (2500 < $(this).scrollTop() && 3200 > $(this).scrollTop()) {
+    } else if (2499 < $(this).scrollTop() && 4000 > $(this).scrollTop()) {
         $(".popimg5").fadeIn();
         $(".popimg4").fadeOut();
         $(".popimg1").fadeOut();
         $(".popimg2").fadeOut();
         $(".popimg3").fadeOut();
+        
+        // pop
+        $(".popno5").fadeOut();
+        $(".popno1").fadeIn();
+        $(".popno2").fadeIn();
+        $(".popno3").fadeIn();
+        $(".popno4").fadeIn();
 
-    }
+    } 
 
      else {
         $(".popimg1").fadeIn();
@@ -466,6 +433,13 @@ $(window).on("scroll", function () {
         $(".popimg3").fadeOut();
         $(".popimg4").fadeOut();
         $(".popimg5").fadeOut();
+        
+        // pop
+        $(".popno1").fadeOut();
+        $(".popno2").fadeIn();
+        $(".popno3").fadeIn();
+        $(".popno4").fadeIn();
+        $(".popno5").fadeIn();
 
     }
 });
