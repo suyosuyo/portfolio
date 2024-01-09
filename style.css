@@ -104,6 +104,15 @@ li {
     display: none;
 }
 
+/* 初めのみ見えなくする */
+.popno1,
+.popimg2,
+.popimg3,
+.popimg4,
+.popimg5 {
+  display: none;
+}
+
 
 
 /* メイン */
@@ -254,11 +263,10 @@ div img {
   }
 
   @keyframes animation4 {
-    0%{ opacity: 1;}
-    20%{ opacity: 0;}
-    40%{ opacity: 1;}
-    60%{ opacity: 0;}
-    80%{ opacity: 1;}
+    0%{ opacity: 0;}
+    25%{ opacity: 1;}
+    50%{ opacity: 0;}
+    75%{ opacity: 1;}
     100%{ opacity: 0;}
   }
 
@@ -275,20 +283,18 @@ div img {
   }
 
   @keyframes animation5 {
-    0%{ opacity: 1;}
-    20%{ opacity: 0;}
-    40%{ opacity: 1;}
-    60%{ opacity: 0;}
-    80%{ opacity: 1;}
+    0%{ opacity: 0;}
+    25%{ opacity: 1;}
+    50%{ opacity: 0;}
+    75%{ opacity: 1;}
     100%{ opacity: 0;}
   }
 
   @keyframes animation52 {
-    0%{ opacity: 0;}
-    20%{ opacity: 1;}
-    40%{ opacity: 0;}
-    60%{ opacity: 1;}
-    80%{ opacity: 0;}
+    0%{ opacity: 1;}
+    25%{ opacity: 0;}
+    50%{ opacity: 1;}
+    75%{ opacity: 0;}
     100%{ opacity: 1;}
   }
 
@@ -330,30 +336,6 @@ div img {
   height: 500px;
 }
 
-
-
-/* アニメーション ふわっと出てくる */
-/* section2以降 */
-/* .fadein1, */
-/* .fadein2,
-.fadein3 {
-    opacity: 0;
-    transition: opacity 1s;
-}
-
-.fadein1 {
-  display: none;
-  transition: opacity 1s;
-}
-
-
-.fadein2 {
-    transition-delay: .5s;
-}
-
-.fadein3 {
-    transition-delay: .7s;
-} */
 
 
 
