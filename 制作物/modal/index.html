@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- フォント -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&family=Zen+Maru+Gothic&display=swap" rel="stylesheet">
+
+    <!-- ファビコン -->
+    <link rel="icon" href="../img/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../img/favicon.ico">
+
+    <!-- script jquery -->
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    <script src="./main.js"></script>
+
+    <!-- css -->
+    <link rel="stylesheet" href="./style.css">
+
+    <title>今までの制作物</title>
+</head>
+<body>
+
+    <div id="splash">
+        <div id="splash_logo"></div>
+    </div>
+
+    <header>
+
+        <nav class="headerimg">
+            <nav>
+                <ul>
+                    <li><a href="../index.html" class="line"><div><h3>TOP</h3></div></a></li>
+                    <li><a href="../自己紹介詳細/index.html" class="line"><div><h3><ruby>自己紹介<rt>じこしょうかい</rt></ruby></h3></div></a></li>
+                    <li><a href="../制作物/index.html" class="line"><div><h3><ruby>制作物<rt>せいさくぶつ</rt></ruby></h3></div></a></li>
+                </ul>
+            </nav>
+        </nav>
+        <img src="./img/wave.png" alt="">
+
+        <!-- sumaho -->
+        <nav class="sumaho">
+            <nav class="button" id="target"></nav>
+
+            <nav id="resnav" class="nav">
+
+                <ul>
+                    <li>
+                        <a href="../index.html">
+                            <div class="btn"><h3>トップページ</h3></div>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../自己紹介詳細/index.html">
+                            <div class="btn"><h3><ruby>自己紹介<rt>じこしょうかい</rt></ruby></h3></div>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="./index.html">
+                            <div class="btn"><h3><ruby>制作物<rt>せいさくぶつ</rt></ruby></h3></div>
+                        </a>
+                    </li>
+
+                </ul>
+
+            </nav>
+        </nav>
+
+    </header>
+
+    <main>
+
+        <section>
+            <div class="all">
+
+            <div class="content1 fadein1">
+
+                <div class="con">
+                    <h1 class="fadein1"><ruby>制作物<rt>せいさくぶつ</rt></ruby></h1>
+<!--  -->
+<div class="content">
+    <a class="js-modal-open" href="" data-target="modal01"><img src="./img/porticon.png" alt=""></a><br>
+    <a class="js-modal-open" href="" data-target="modal02"><img src="./img/porticon.png" alt=""></a>
+</div>
+
+                  
+<!--  -->
+
+                </div>
+
+            </div>
+
+            </div>
+
+            <div>
+
+                <div id="modal01" class="modal js-modal">
+                    <div class="modal__bg js-modal-close"></div>
+                    <div class="modal__content">
+                        <div class="modal_contenta">
+                            <a class="js-modal-close" href="">✖️</a>
+                            <p>きたかんとう水族館(チーム制作)</p>
+                            <div class="modal_box">
+                                <div class="img1">
+                                    <img src="./img/kitakanHP2.png" alt="" class="pc">
+                                    <img src="./img/kitakanHP3.png" alt="" class="pc">
+
+                                    <img src="./img/kitakanHP.png" alt="" class="sumaho1">
+                                </div>
+                                <div class="textbox">
+                                    <h3>・学校でのチーム制作で作成しました。</h3>
+                                    <h3>・TOPページ、ニュースの部分のデザイン、コーディングを担当しました。</h3>
+                                    <h3>・迫力や実際の水族館の想像がしやすくなるかと思い、TOPページには画像ではなく動画を採用しました。</h3>
+                                    <h3>・子連れの方に来ていただける、柔らかい印象のサイトという希望だったので、イラストを多く使用し、可愛らしい雰囲気にしました。</h3>
+                                    <!-- <h3>https://</h3> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div><!--modal__inner-->
+                </div><!--modal-->
+                
+                
+                <div id="modal02" class="modal js-modal">
+                    <div class="modal__bg js-modal-close"></div>
+                    <div class="modal__content">
+                        <p>2つ目モーダルウィンドウです。ここにモーダルウィンドウで表示したいコンテンツを入れます。モーダルウィンドウを閉じる場合は下の「閉じる」をクリックするか、背景の黒い部分をクリックしても閉じることができます。</p>
+                        <a class="js-modal-close" href="">閉じる</a>
+                    </div><!--modal__inner-->
+                </div>
+
+            </div>
+
+            </div>
+            
+
+        </section>
+        
+
+        <footer>
+
+            <nav>
+
+            </nav>
+
+        </footer>
+
+    </main>
+
+    <script>
+        //         $('#target').click(()=>{
+        //   $('#target').toggleClass('button2');
+        //   $('#resnav').toggleClass('nav_active');
+        // });
+        
+        $(function () {
+          $('#target').click(() => {
+            $('#target').toggleClass('button2');
+            $('#resnav').toggleClass('nav_active');
+          });
+          // ナビ内リンクでジャンプ時、メニューを閉じる
+        
+          $('.btn').click(() => {
+            $('#target').removeClass('button2');
+            $('#resnav').removeClass('nav_active');
+          });
+        });
+            </script>
+</body>
+</html>

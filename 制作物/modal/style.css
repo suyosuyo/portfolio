@@ -44,7 +44,15 @@ h3 {
     line-height: 2;
 }
 
-section {
+/* section {
+    横幅指定
+    margin: 4rem auto;
+    position: relative;
+
+    width: 70%;
+} */
+
+.all {
     /* 横幅指定 */
     margin: 4rem auto;
     position: relative;
@@ -225,111 +233,9 @@ footer nav {
   /* モーダル */
 
 
-.modal_wrap input {
-  display: none;
-}
-
-.modal_overlay {
-  display: flex;
-  justify-content: center;
-  overflow: auto;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 9999;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.7);
-  opacity: 0;
-  transition: opacity 0.5s, transform 0s 0.5s;
-  transform: scale(0);
-}
-
-.modal_trigger {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-}
-
-
-.modal_content {
-    /* align-self: center; */
-    margin: auto; 
-    border-radius: 50px;
-    width: 60%;
-    padding: 30px 30px 15px;
-    box-sizing: border-box;
-    background:  #f5efe5;
-    line-height: 1.4em;
-    transition: 0.5s;
-}
-
-.modal_content p {
-  padding-top: 0;
-}
-
-.close_button {
-  position: absolute;
-  top: 14px;
-  right: 25px;
-  font-size: 24px;
-  cursor: pointer;
-  /* background-color: rgba(0, 0, 0, 0.2); */
-}
-
-.modal_wrap input:checked ~ .modal_overlay {
-  opacity: 1;
-  transform: scale(1);
-  transition: opacity 0.5s;
-}
-
-.modal_wrap input:checked ~ .modal_overlay .modal_content {
-  transform: translateY(20px);
-}
-
-.open_button {
-    cursor :pointer;
-    transition: all 0.3s;
-    /* display: block; */
-    max-width:300px;
-    text-decoration: none;
-}
-
-.open-button:active {
-  /*ボタンを押したとき*/
-  -webkit-transform: translateY(2px);
-  transform: translateY(2px);/*下に動く*/
-}
-
-
-.modal_title2 {
-  font-size: 1.5em;
-	position: relative;
-	overflow: hidden;
-  padding-bottom: 10px;
-  margin-top:0;
-  margin-bottom: 0;
-
-  line-height: 2;
-}
-
-.modal_title2::before,
-.modal_title2::after{
-	content: "";
-	position: absolute;
-	bottom: 0;
-}
 
 /* h2 プライマリカラー*/
-.modal_title2:before{
-	border-bottom: 4px solid  rgb(227, 205, 193);
-	width: 100%;
-}
 
-.modal_img img {
-    width: 200px;
-    /* width: 30%; */
-}
 
 .textbox {
     width: 30%;
@@ -412,10 +318,8 @@ footer nav {
     }
 
     .img1 {
-        width: 40%;
+        width: 50%;
         align-items: center;
-        display: flex;
-        justify-content: space-evenly;
     }
 
     .img1 img {
@@ -456,6 +360,10 @@ footer nav {
         flex-wrap: wrap;
     }
 
+    /* mo-daru */
+    .modal_box {
+        display: block;
+    }
 
 
     
@@ -579,6 +487,13 @@ footer nav {
 
 }
 
+/* PC */
+@media screen and (min-width:1118px) {
+    .img1 img {
+        width: 200px;
+    }
+}
+
 /* レスポンシブメニュー */
 /* レスポンシブ */
 
@@ -678,4 +593,71 @@ footer nav {
     .modal_wrap a:hover {
         color: #ebd9c2;
         transition: all .2s ease;
+    }
+
+    /* モーダル */
+    .content{
+        margin: 0 auto;
+        padding: 40px;
+    }
+    .modal{
+        display: none;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        width: 100%;
+    }
+    .modal__bg{
+        background: rgba(0,0,0,0.8);
+        height: 100vh;
+        position: absolute;
+        width: 100%;
+    }
+    .modal__content{
+        background: #fff;
+        left: 50%;
+        padding: 40px;
+        position: absolute;
+        top: 50%;
+        transform: translate(-50%,-50%);
+        width: 60%;
+        overflow: scroll;
+        height: 93%;
+        border-radius: 50px;
+        background:  #f5efe5;
+        line-height: 1.4em;
+        transition: 0.5s;
+
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+
+    .modal__content::-webkit-scrollbar {
+        display: none;
+    }
+
+    .content img {
+        height: 190px;
+        width: 190px;
+    }
+
+    
+
+    .modal_box {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .img1 {
+        width: 50%;
+        align-items: center;
+    }
+
+    .img1 img {
+        width: 100%;
+        padding: 5%;
+    }
+
+    .textbox {
+        width: 100%;
     }
