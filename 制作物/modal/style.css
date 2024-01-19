@@ -346,12 +346,17 @@ footer nav {
 
     /* aタグ 制作物リンク */
 
-    .modal_wrap a {
+    .textbox a {
         line-height: 3;
+        color:#a0937d;
+        background-color: rgb(227, 205, 193);
+        padding: 8px 32px;
+        border-radius: 30px;
+        margin: 5% auto;
     }
 
-    .modal_wrap a:hover {
-        color: #ebd9c2;
+    .textbox a:hover {
+        color: #f4f4f4;
         transition: all .2s ease;
     }
 
@@ -409,6 +414,9 @@ footer nav {
         height:300px;
     }
 
+    .pic {
+        justify-content: space-around;
+    }
 
 
     .modal_box {
@@ -510,24 +518,13 @@ footer nav {
         justify-content: center;
     }
 
-    .itiretume,
-    .niretume,
-    .sanretume {
-        display: block;
-    }
-
-    .niretume {
-        margin: 0;
-    }
-
-    .sanretume {
-        display: flex;
-        flex-wrap: wrap;
-    }
-
     /* mo-daru */
     .modal_box {
         display: block;
+    }
+
+    .pic {
+        display: flex;
     }
 
     .content {
