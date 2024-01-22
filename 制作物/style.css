@@ -460,6 +460,10 @@ footer nav {
         height: 8px; /* 線幅 */
     }
 
+    .dezain {
+        align-items: flex-start;
+    }
+
     /* モーダルアイコン */
 
 
@@ -530,6 +534,10 @@ footer nav {
 
     .content {
         padding: 0;
+    }
+
+    .dezain {
+        align-items: flex-start;
     }
 
     
