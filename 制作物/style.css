@@ -350,7 +350,7 @@ footer nav {
         line-height: 3;
         color:#a0937d;
         background-color: rgb(227, 205, 193);
-        padding: 8px 32px;
+        padding: 8px 27px;
         border-radius: 30px;
         margin: 5% auto;
     }
@@ -378,6 +378,7 @@ footer nav {
         position: fixed;
         top: 0;
         width: 100%;
+        z-index: 999999;
     }
 
     .modal__bg{
@@ -650,6 +651,9 @@ footer nav {
         padding: 45px 20px 20px;
     }
       
+    .dezain {
+        display: block;
+    }
 
 }
 
