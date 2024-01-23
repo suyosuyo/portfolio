@@ -464,6 +464,7 @@ footer nav {
         align-items: flex-start;
     }
 
+
     /* モーダルアイコン */
 
 
@@ -540,6 +541,14 @@ footer nav {
         align-items: flex-start;
     }
 
+    .kuma {
+        display: block;
+        width: 100%;
+    }
+
+    .bana {
+        width: 100%;
+    }
     
 }
 
@@ -670,5 +679,9 @@ footer nav {
 
     .img1 {
         width: 50%;
+    }
+
+    .bana {
+        width: 100%;
     }
 }
