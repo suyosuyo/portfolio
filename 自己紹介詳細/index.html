@@ -15,7 +15,6 @@
 
     <!-- script jquery -->
     <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
-    <script src="./main.js"></script>
 
     <!-- css -->
     <link rel="stylesheet" href="./style.css">
@@ -125,20 +124,7 @@
 
     </main>
 
-    <script>
-       
-        $(function () {
-          $('#target').click(() => {
-            $('#target').toggleClass('button2');
-            $('#resnav').toggleClass('nav_active');
-          });
-          // ナビ内リンクでジャンプ時、メニューを閉じる
-        
-          $('.btn').click(() => {
-            $('#target').removeClass('button2');
-            $('#resnav').removeClass('nav_active');
-          });
-        });
-            </script>
+    <script src="./main.js"></script>
+    
 </body>
 </html>
