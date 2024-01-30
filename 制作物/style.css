@@ -201,10 +201,7 @@ footer nav {
     border-radius: 5px;
   }
 
-
-  /* モーダル */
-
-
+  
 
 /* h2 プライマリカラー*/
 
@@ -490,12 +487,6 @@ footer nav {
         margin: 0 auto 24px auto;
     }
 
-    .modal_img {
-        display: flex;
-        flex-direction: column;
-        padding: 1rem 0 0 0;
-    }
-
     .img1 {
         width: 50%;
         align-items: center;
@@ -511,11 +502,6 @@ footer nav {
         width: 100%;
         padding-top: 5%;
     }
-
-    /* .itiretume {
-        display: flex;
-
-    } */
 
     .sakuhin {
         display: flex;
@@ -585,7 +571,6 @@ footer nav {
         display: block;
     }
 
-
     .box-1 {
         flex-direction: column;
     }
@@ -594,32 +579,7 @@ footer nav {
         margin: 0 auto 24px auto;
     }
 
-    .modal_img {
-        display: flex;
-        flex-direction: column;
-        padding: 1rem 0 0 0;
-    }
-
-    .modal_content {
-        width: 80%;
-    }
-
-    .img1 {
-        width: 100%;
-        align-items: center;
-        display: flex;
-        justify-content: space-evenly;
-    }
-
-    .img1 img {
-        padding: 5%;
-    }
-
-    .modal_img img {
-        width: 200%;
-    }
-
-    .modal2 img {
+    .modal__content {
         width: 90%;
     }
 
