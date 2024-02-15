@@ -347,9 +347,10 @@ footer nav {
         line-height: 3;
         color:#a0937d;
         background-color: rgb(227, 205, 193);
-        padding: 8px 27px;
+        padding: 3px 10px;
         border-radius: 30px;
-        margin: 5% auto;
+        margin: 3% 1% 1% 1%;
+        display: inline-block;
     }
 
     .textbox a:hover {
